@@ -11,6 +11,10 @@ import UIKit
 enum PlayButtonState {
     case Paused
     case Playing
+    
+    var value: CGFloat {
+        return (self == .Paused) ? 1.0 : 0.0
+    }
 }
 
 class PlayButton: UIButton {
@@ -38,7 +42,7 @@ class PlayButton: UIButton {
             pop_removeAnimationForKey("animationValue")
         }
         
-        let toValue: CGFloat = (buttonState == .Paused) ? 1.0 : 0.0
+        let toValue: CGFloat = buttonState.value
         
         if animated {
             let animation: POPBasicAnimation = POPBasicAnimation()
