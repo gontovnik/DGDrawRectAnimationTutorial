@@ -35,18 +35,26 @@ class ViewController: UIViewController {
     // MARK: Methods
     
     func playButtonPressed() {
-        if playButton.buttonState == .Playing {
-            playButton.setButtonState(.Paused, animated: true)
-        } else {
-            playButton.setButtonState(.Playing, animated: true)
+        if playButton.buttonState == .Play {
+            playButton.setButtonState(.Pause, animated: true)
+        } else if playButton.buttonState == .Pause {
+            playButton.setButtonState(.Stop, animated: true)
+        } else if playButton.buttonState == .Stop {
+            playButton.setButtonState(.Record, animated: true)
+        } else if playButton.buttonState == .Record {
+            playButton.setButtonState(.Play, animated: true)
         }
     }
 
     func caPlayButtonPressed() {
-        if caPlayButton.buttonState == .Playing {
-            caPlayButton.setButtonState(.Paused, animated: true)
-        } else {
-            caPlayButton.setButtonState(.Playing, animated: true)
+        if caPlayButton.buttonState == .Play {
+            caPlayButton.setButtonState(.Pause, animated: true)
+        } else if caPlayButton.buttonState == .Pause {
+            caPlayButton.setButtonState(.Stop, animated: true)
+        } else if caPlayButton.buttonState == .Stop {
+            caPlayButton.setButtonState(.Record, animated: true)
+        } else if caPlayButton.buttonState == .Record {
+            caPlayButton.setButtonState(.Play, animated: true)
         }
     }
 
