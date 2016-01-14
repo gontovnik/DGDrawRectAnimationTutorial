@@ -9,11 +9,13 @@
 import UIKit
 
 enum PlayButtonState {
-    case Paused
-    case Playing
+    case Pause
+    case Play
+    case Stop
+    case Record
     
     var value: CGFloat {
-        return (self == .Paused) ? 1.0 : 0.0
+        return (self == .Pause) ? 1.0 : 0.0
     }
 }
 
@@ -22,7 +24,7 @@ class PlayButton: UIButton {
     // MARK: -
     // MARK: Vars
     
-    private(set) var buttonState = PlayButtonState.Paused
+    private(set) var buttonState = PlayButtonState.Pause
     private var animationValue: CGFloat = 1.0 {
         didSet {
             setNeedsDisplay()

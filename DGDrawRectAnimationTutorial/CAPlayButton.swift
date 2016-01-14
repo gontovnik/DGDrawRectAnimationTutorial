@@ -7,8 +7,10 @@
 //
 
 enum CAPlayButtonState {
-    case Paused
-    case Playing
+    case Pause
+    case Play
+    case Stop
+    case Record
 }
 
 class CAPlayButton: UIButton {
@@ -16,7 +18,7 @@ class CAPlayButton: UIButton {
     // MARK: -
     // MARK: Vars
     
-    private(set) var buttonState = CAPlayButtonState.Paused
+    private(set) var buttonState = CAPlayButtonState.Pause
     private var leftHalfLayer = CAShapeLayer()
     private var rightHalfLayer = CAShapeLayer()
     
@@ -35,6 +37,8 @@ class CAPlayButton: UIButton {
         rightHalfLayer.fillColor = self.tintColor.CGColor
         rightHalfLayer.path = rightHalfPathForState(buttonState)
         layer.addSublayer(rightHalfLayer)
+        
+        self.layer.masksToBounds = true
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,6 +55,30 @@ class CAPlayButton: UIButton {
         self.buttonState = buttonState
         
         if animated {
+            print("animated")
+            let squareAnimation = CABasicAnimation(keyPath: "cornerRadius");
+            
+            // roundfy for record
+            if self.buttonState == .Record {
+                squareAnimation.fromValue = 0.0
+                squareAnimation.toValue = self.frame.width/2.0
+                squareAnimation.duration = 0.25
+                squareAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+                squareAnimation.fillMode = kCAFillModeForwards
+                squareAnimation.removedOnCompletion = false
+                self.layer.addAnimation(squareAnimation, forKey: "cornerRadius")
+                self.layer.cornerRadius = self.frame.width/2.0
+            } else {
+                squareAnimation.fromValue = self.layer.cornerRadius
+                squareAnimation.toValue = 0.0
+                squareAnimation.duration = 0.25
+                squareAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+                squareAnimation.fillMode = kCAFillModeForwards
+                squareAnimation.removedOnCompletion = false
+                self.layer.addAnimation(squareAnimation, forKey: "cornerRadius")
+                self.layer.cornerRadius = 0.0
+            }
+            
             let leftHalfAnimation = CABasicAnimation(keyPath: "path")
             if let presentationLayer = leftHalfLayer.presentationLayer() as? CAShapeLayer {
                 leftHalfAnimation.fromValue = presentationLayer.path
@@ -91,19 +119,24 @@ class CAPlayButton: UIButton {
     private func leftHalfPathForState(buttonState: CAPlayButtonState) -> CGPathRef {
         let bezierPath = UIBezierPath()
         
-        let width = leftHalfLayer.bounds.width
+        let width = leftHalfLayer.bounds.width+1
         let height = leftHalfLayer.bounds.height
         
-        if buttonState == .Paused {
-            bezierPath.moveToPoint(CGPoint(x: 0.0, y: 0.0))
+        if buttonState == .Play {
+            bezierPath.moveToPoint(CGPoint(x: width, y: height / 4.0))
+            bezierPath.addLineToPoint(CGPoint(x: 0.0, y: 0.0))
             bezierPath.addLineToPoint(CGPoint(x: 0.0, y: height))
             bezierPath.addLineToPoint(CGPoint(x: width, y: height / 4.0 * 3.0))
-            bezierPath.addLineToPoint(CGPoint(x: width, y: height / 4.0))
-        } else {
-            bezierPath.moveToPoint(CGPoint(x: 0.0, y: 0.0))
+        } else if buttonState == .Pause {
+            bezierPath.moveToPoint(CGPoint(x: width * 0.64, y: 0.0))
+            bezierPath.addLineToPoint(CGPoint(x: 0.0, y: 0.0))
             bezierPath.addLineToPoint(CGPoint(x: 0.0, y: height))
             bezierPath.addLineToPoint(CGPoint(x: width * 0.64, y: height))
-            bezierPath.addLineToPoint(CGPoint(x: width * 0.64, y: 0.0))
+        } else {
+            bezierPath.moveToPoint(CGPoint(x:width, y:0))
+            bezierPath.addLineToPoint(CGPoint(x:0.0, y:0.0))
+            bezierPath.addLineToPoint(CGPoint(x: 0, y: height))
+            bezierPath.addLineToPoint(CGPoint(x: width, y: height))
         }
         
         bezierPath.closePath()
@@ -117,16 +150,21 @@ class CAPlayButton: UIButton {
         let width = rightHalfLayer.bounds.width
         let height = rightHalfLayer.bounds.height
         
-        if buttonState == .Paused {
+        if buttonState == .Play {
             bezierPath.moveToPoint(CGPoint(x: 0.0, y: height / 4.0))
             bezierPath.addLineToPoint(CGPoint(x: 0.0, y: height / 4.0 * 3.0))
             bezierPath.addLineToPoint(CGPoint(x: width, y: height / 2.0))
             bezierPath.addLineToPoint(CGPoint(x: width, y: height / 2.0))
-        } else {
+        } else if buttonState == .Pause {
             bezierPath.moveToPoint(CGPoint(x: width * 0.36, y: 0.0))
             bezierPath.addLineToPoint(CGPoint(x: width * 0.36, y: height))
             bezierPath.addLineToPoint(CGPoint(x: width, y: height))
             bezierPath.addLineToPoint(CGPoint(x: width, y: 0.0))
+        } else {
+            bezierPath.moveToPoint(CGPoint(x:0.0, y:0.0))
+            bezierPath.addLineToPoint(CGPoint(x: 0, y: height))
+            bezierPath.addLineToPoint(CGPoint(x: width, y: height))
+            bezierPath.addLineToPoint(CGPoint(x:width, y:0))
         }
         
         bezierPath.closePath()
