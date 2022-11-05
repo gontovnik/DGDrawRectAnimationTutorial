@@ -38,34 +38,36 @@ class PlayButton: UIButton {
         }
         self.buttonState = buttonState
         
-        if pop_animationForKey("animationValue") != nil {
-            pop_removeAnimationForKey("animationValue")
+        if pop_animation(forKey: "animationValue") != nil {
+            pop_removeAnimation(forKey: "animationValue")
         }
         
         let toValue: CGFloat = buttonState.value
         
         if animated {
             let animation: POPBasicAnimation = POPBasicAnimation()
-            if let property = POPAnimatableProperty.propertyWithName("animationValue", initializer: { (prop: POPMutableAnimatableProperty!) -> Void in
-                prop.readBlock = { (object: AnyObject!, values: UnsafeMutablePointer<CGFloat>) -> Void in
+
+            if let property = POPAnimatableProperty.property(withName: "animationValue",
+                                                             initializer: { (prop: POPMutableAnimatableProperty!) -> Void in
+                prop.readBlock = { (object: Any?, values: UnsafeMutablePointer<CGFloat>?) -> Void in
                     if let button = object as? PlayButton {
-                        values[0] = button.animationValue
+                        values?[0] = button.animationValue
                     }
                 }
-                prop.writeBlock = { (object: AnyObject!, values: UnsafePointer<CGFloat>) -> Void in
+                prop.writeBlock = { (object: Any?, values: UnsafePointer<CGFloat>?) -> Void in
                     if let button = object as? PlayButton {
-                        button.animationValue = values[0]
+                        button.animationValue = values?[0] ?? .zero
                     }
                 }
                 prop.threshold = 0.01
             }) as? POPAnimatableProperty {
                 animation.property = property
             }
-            animation.fromValue = NSNumber(float: Float(self.animationValue))
-            animation.toValue = NSNumber(float: Float(toValue))
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.fromValue = NSNumber(value: Float(self.animationValue))
+            animation.toValue = NSNumber(value: Float(toValue))
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
             animation.duration = 0.25
-            pop_addAnimation(animation, forKey: "percentage")
+            pop_add(animation, forKey: "percentage")
         } else {
             animationValue = toValue
         }
@@ -74,8 +76,8 @@ class PlayButton: UIButton {
     // MARK: -
     // MARK: Draw
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         let height = rect.height
         
@@ -87,19 +89,18 @@ class PlayButton: UIButton {
         let h2 = height / 2.0 * animationValue
         
         let context = UIGraphicsGetCurrentContext()
-        
-        CGContextMoveToPoint(context, 0.0, 0.0)
-        CGContextAddLineToPoint(context, width, h1)
-        CGContextAddLineToPoint(context, width, height - h1)
-        CGContextAddLineToPoint(context, 0.0, height)
-        
-        CGContextMoveToPoint(context, rect.width - width, h1)
-        CGContextAddLineToPoint(context, rect.width, h2)
-        CGContextAddLineToPoint(context, rect.width, height - h2)
-        CGContextAddLineToPoint(context, rect.width - width, height - h1)
-        
-        CGContextSetFillColorWithColor(context, tintColor.CGColor)
-        CGContextFillPath(context)
+
+        context?.move(to: CGPoint(x: 0.0, y: 0.0))
+        context?.addLine(to: CGPoint(x: width, y: h1))
+        context?.addLine(to: CGPoint(x: width, y: height - h1))
+        context?.addLine(to: CGPoint(x: 0.0, y: height))
+
+        context?.move(to: CGPoint(x: rect.width - width, y: h1))
+        context?.addLine(to: CGPoint(x: rect.width, y: h2))
+        context?.addLine(to: CGPoint(x: rect.width, y: height - h2))
+        context?.addLine(to: CGPoint(x: rect.width - width, y: height - h1))
+
+        context?.setFillColor(tintColor.cgColor)
+        context?.fillPath()
     }
-    
 }

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0550F3011BB524D000A1D31A /* CAPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550F3001BB524D000A1D31A /* CAPlayButton.swift */; settings = {ASSET_TAGS = (); }; };
+		0550F3011BB524D000A1D31A /* CAPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550F3001BB524D000A1D31A /* CAPlayButton.swift */; };
 		05607FBB1BB3C6C600D18764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05607FBA1BB3C6C600D18764 /* AppDelegate.swift */; };
 		05607FBD1BB3C6C600D18764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05607FBC1BB3C6C600D18764 /* ViewController.swift */; };
 		05607FC01BB3C6C600D18764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05607FBE1BB3C6C600D18764 /* Main.storyboard */; };
 		05607FC21BB3C6C600D18764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05607FC11BB3C6C600D18764 /* Assets.xcassets */; };
 		05607FC51BB3C6C600D18764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05607FC31BB3C6C600D18764 /* LaunchScreen.storyboard */; };
-		05607FD11BB3CC3200D18764 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05607FD01BB3CC3200D18764 /* PlayButton.swift */; settings = {ASSET_TAGS = (); }; };
-		7759A82A37B85B19D8846CCE /* libPods-DGDrawRectAnimationTutorial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A710F5E8F8A55BF00D0EAF /* libPods-DGDrawRectAnimationTutorial.a */; };
+		05607FD11BB3CC3200D18764 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05607FD01BB3CC3200D18764 /* PlayButton.swift */; };
+		E6456BD32A2D0F067F9401B7 /* libPods-DGDrawRectAnimationTutorial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4003ECE127E2D5D5B0E4D9 /* libPods-DGDrawRectAnimationTutorial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		05607FC61BB3C6C600D18764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05607FD01BB3CC3200D18764 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		05607FD21BB3D53600D18764 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		A0A710F5E8F8A55BF00D0EAF /* libPods-DGDrawRectAnimationTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DGDrawRectAnimationTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A12439652B46BA3CCF23BBF5 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDrawRectAnimationTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DGDrawRectAnimationTutorial/Pods-DGDrawRectAnimationTutorial.debug.xcconfig"; sourceTree = "<group>"; };
-		F829F4EA45DC1DC759A0DB03 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDrawRectAnimationTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-DGDrawRectAnimationTutorial/Pods-DGDrawRectAnimationTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		708AB4A49A2E75D30688DBA9 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDrawRectAnimationTutorial.release.xcconfig"; path = "Target Support Files/Pods-DGDrawRectAnimationTutorial/Pods-DGDrawRectAnimationTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		8C4003ECE127E2D5D5B0E4D9 /* libPods-DGDrawRectAnimationTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DGDrawRectAnimationTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1139BAB07B8644B45777079 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDrawRectAnimationTutorial.debug.xcconfig"; path = "Target Support Files/Pods-DGDrawRectAnimationTutorial/Pods-DGDrawRectAnimationTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7759A82A37B85B19D8846CCE /* libPods-DGDrawRectAnimationTutorial.a in Frameworks */,
+				E6456BD32A2D0F067F9401B7 /* libPods-DGDrawRectAnimationTutorial.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +50,8 @@
 			children = (
 				05607FB91BB3C6C600D18764 /* DGDrawRectAnimationTutorial */,
 				05607FB81BB3C6C600D18764 /* Products */,
-				D7850215CF8513795D8B6122 /* Pods */,
-				DE69B47DA130AD2D3BD4F81B /* Frameworks */,
+				5B06FC6B43515A0B025C2DEA /* Pods */,
+				6D9DF04D0E6B67737F76F1DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,19 +79,19 @@
 			path = DGDrawRectAnimationTutorial;
 			sourceTree = "<group>";
 		};
-		D7850215CF8513795D8B6122 /* Pods */ = {
+		5B06FC6B43515A0B025C2DEA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A12439652B46BA3CCF23BBF5 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */,
-				F829F4EA45DC1DC759A0DB03 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */,
+				D1139BAB07B8644B45777079 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */,
+				708AB4A49A2E75D30688DBA9 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		DE69B47DA130AD2D3BD4F81B /* Frameworks */ = {
+		6D9DF04D0E6B67737F76F1DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0A710F5E8F8A55BF00D0EAF /* libPods-DGDrawRectAnimationTutorial.a */,
+				8C4003ECE127E2D5D5B0E4D9 /* libPods-DGDrawRectAnimationTutorial.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,11 +103,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05607FC91BB3C6C600D18764 /* Build configuration list for PBXNativeTarget "DGDrawRectAnimationTutorial" */;
 			buildPhases = (
-				8E7D5F2784E913775B8D4235 /* Check Pods Manifest.lock */,
+				F4DA5FD109DBC9CD89BBBB3F /* [CP] Check Pods Manifest.lock */,
 				05607FB31BB3C6C600D18764 /* Sources */,
 				05607FB41BB3C6C600D18764 /* Frameworks */,
 				05607FB51BB3C6C600D18764 /* Resources */,
-				9F4DE103DAC4BD482506D52A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,7 +123,7 @@
 		05607FAF1BB3C6C600D18764 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Danil Gontovnik";
 				TargetAttributes = {
 					05607FB61BB3C6C600D18764 = {
@@ -137,6 +136,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -164,34 +164,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8E7D5F2784E913775B8D4235 /* Check Pods Manifest.lock */ = {
+		F4DA5FD109DBC9CD89BBBB3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGDrawRectAnimationTutorial-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9F4DE103DAC4BD482506D52A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DGDrawRectAnimationTutorial/Pods-DGDrawRectAnimationTutorial-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -234,17 +226,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -266,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -280,17 +284,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -306,9 +322,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -317,29 +334,31 @@
 		};
 		05607FCA1BB3C6C600D18764 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A12439652B46BA3CCF23BBF5 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */;
+			baseConfigurationReference = D1139BAB07B8644B45777079 /* Pods-DGDrawRectAnimationTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DGDrawRectAnimationTutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gatafan.DGDrawRectAnimationTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = DGDrawRectAnimationTutorial/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		05607FCB1BB3C6C600D18764 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F829F4EA45DC1DC759A0DB03 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */;
+			baseConfigurationReference = 708AB4A49A2E75D30688DBA9 /* Pods-DGDrawRectAnimationTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DGDrawRectAnimationTutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gatafan.DGDrawRectAnimationTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = DGDrawRectAnimationTutorial/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
