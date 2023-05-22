@@ -59,9 +59,9 @@ class CAPlayButton: UIButton {
             }
             leftHalfAnimation.toValue = leftHalfPathForState(buttonState: buttonState)
             leftHalfAnimation.duration = 0.25
-            leftHalfAnimation.fillMode = CAMediaTimingFillMode.forwards
+            leftHalfAnimation.fillMode = .forwards
             leftHalfAnimation.isRemovedOnCompletion = false
-            leftHalfAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            leftHalfAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
             leftHalfLayer.add(leftHalfAnimation, forKey: "kPathAnimation")
             
             let rightHalfAnimation = CABasicAnimation(keyPath: "path")
@@ -72,9 +72,9 @@ class CAPlayButton: UIButton {
             }
             rightHalfAnimation.toValue = rightHalfPathForState(buttonState: buttonState)
             rightHalfAnimation.duration = 0.25
-            rightHalfAnimation.fillMode = CAMediaTimingFillMode.forwards
+            rightHalfAnimation.fillMode = .forwards
             rightHalfAnimation.isRemovedOnCompletion = false
-            rightHalfAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            rightHalfAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
             rightHalfLayer.add(rightHalfAnimation, forKey: "kPathAnimation")
         } else {
             leftHalfLayer.removeAllAnimations()
@@ -131,7 +131,7 @@ class CAPlayButton: UIButton {
         
         bezierPath.close()
         
-        return bezierPath.cgPath;
+        return bezierPath.cgPath
     }
     
     // MARK: -
