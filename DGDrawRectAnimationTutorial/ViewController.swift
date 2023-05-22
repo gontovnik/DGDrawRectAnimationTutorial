@@ -22,33 +22,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         playButton = PlayButton()
-        playButton.frame = CGRect(x: floor((view.bounds.width - 150.0) / 2.0), y: 50.0, width: 150.0, height: 150.0)
-        playButton.addTarget(self, action: Selector("playButtonPressed"), forControlEvents: .TouchUpInside)
+        playButton.frame = CGRect(x: floor((view.bounds.width - 150.0) / 2.0),
+                                  y: 50.0, width: 150.0, height: 150.0)
+        playButton.addTarget(self, action: #selector(playButtonPressed), for: .touchUpInside)
         view.addSubview(playButton)
         
-        caPlayButton = CAPlayButton(frame: CGRect(x: floor((view.bounds.width - 150.0) / 2.0), y: 250.0, width: 150.0, height: 150.0))
-        caPlayButton.addTarget(self, action: Selector("caPlayButtonPressed"), forControlEvents: .TouchUpInside)
+        caPlayButton = CAPlayButton(frame: CGRect(x: floor((view.bounds.width - 150.0) / 2.0),
+                                                  y: 250.0, width: 150.0, height: 150.0))
+        caPlayButton.addTarget(self, action: #selector(caPlayButtonPressed), for: .touchUpInside)
         view.addSubview(caPlayButton)
     }
     
     // MARK: -
     // MARK: Methods
     
-    func playButtonPressed() {
+    @objc func playButtonPressed() {
         if playButton.buttonState == .Playing {
-            playButton.setButtonState(.Paused, animated: true)
+            playButton.setButtonState(buttonState: .Paused, animated: true)
         } else {
-            playButton.setButtonState(.Playing, animated: true)
+            playButton.setButtonState(buttonState: .Playing, animated: true)
         }
     }
 
-    func caPlayButtonPressed() {
+    @objc func caPlayButtonPressed() {
         if caPlayButton.buttonState == .Playing {
-            caPlayButton.setButtonState(.Paused, animated: true)
+            caPlayButton.setButtonState(buttonState: .Paused, animated: true)
         } else {
-            caPlayButton.setButtonState(.Playing, animated: true)
+            caPlayButton.setButtonState(buttonState: .Playing, animated: true)
         }
     }
-
 }
-
